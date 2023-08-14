@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swiper-ex</title>
+    <title>swiper-ex2</title>
     <link rel="stylesheet" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+
+    <!---API호출구문(바디 밑에 입력해주는게 좋음)
+        브라우저는 html요소 (DOM-document object model)를 
+        제어하는 코드임으로 html요소 아래입력해야함.
+        --->
+    <script>
+        //한줄주석
+        /*여러줄주석*/
+        //기본 스와이퍼 연결법
+        const swiper = new Swiper("main",{
+             speed: 500, //스와이프 시, 패널이 넘어가는 속도 (밀리세컨드 단위임. 1000ms = 1s)
+             loop: true, //스와이프 반복설정 (처음과 끝을 이어서 순환시켜줌)
+             direction: "horizontal", //vertical(세로), horizontal(가로)이동
+             grabCursor: true, //스와이프 시, 클릭하면 그립되는 마우스모양으로 변경됨.
+             slidesPerView: "auto", //숫자입력 (해당갯수단위로 패널보임), "auto": 100%, 특정크기를 지정
+             spaceBetween: 30, //패널 사이 간격 (px)
+             centeredSlides: true, //활성화 패널을 항상 가로 가운데 배치
+        });
+    </script>
 </body>
 </html>
